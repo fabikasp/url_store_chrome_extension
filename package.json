@@ -1,5 +1,5 @@
 {
-  "name": "walking_dictionary",
+  "name": "url_store_chrome_extension",
   "version": "1.0.0",
   "description": "Chrome Extension zur Speicherung und zum Abruf von URLs.",
   "scripts": {
@@ -14,14 +14,17 @@
   "author": "Fabian Kasparek",
   "license": "GNU General Public License 3",
   "dependencies": {
-    "@types/react": "^18.0.18",
-    "@types/react-dom": "^18.0.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.15",
+    "@mui/material": "^5.10.15",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
-    "typescript": "^4.8.2"
+    "typescript": "^4.9.3"
   }
 }

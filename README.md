@@ -16,6 +16,11 @@ Chrome Extension zur Speicherung und zum Abruf von URLs.
     <td>lizenziert mit <a href="https://github.com/facebook/react/blob/main/LICENSE">MIT License</a>
   </tr>
   <tr>
+    <td><a href="https://github.com/mui/material-ui">Material UI</a></td>
+    <td>von <a href="https://github.com/mui">MUI</a></td>
+    <td>lizenziert mit <a href="https://github.com/mui/material-ui/blob/master/LICENSE">MIT License</a>
+  </tr>
+  <tr>
     <td><a href="https://github.com/parcel-bundler/parcel">Parcel</a></td>
     <td>von <a href="https://github.com/parcel-bundler">Parcel</a></td>
     <td>lizenziert mit <a href="https://github.com/parcel-bundler/parcel/blob/v2/LICENSE">MIT License</a>
