@@ -1,0 +1,27 @@
+{
+  "name": "walking_dictionary",
+  "version": "1.0.0",
+  "description": "Chrome Extension zur Speicherung und zum Abruf von URLs.",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabikasp/url_store_chrome_extension.git"
+  },
+  "author": "Fabian Kasparek",
+  "license": "GNU General Public License 3",
+  "dependencies": {
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.8.2"
+  }
+}
