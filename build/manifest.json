@@ -1,0 +1,12 @@
+{
+    "name": "URL Store",
+    "version": "1.0.0",
+    "description": "Chrome extension for storing and retrieving URLs.",
+    "manifest_version": 3,
+    "author": "Fabian Kasparek",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "URL Store"
+    },
+    "permissions": ["tabs"]
+}

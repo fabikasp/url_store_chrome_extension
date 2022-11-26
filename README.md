@@ -2,6 +2,10 @@
 
 Chrome Extension zur Speicherung und zum Abruf von URLs.
 
+## Ausführung
+
+[build-Ordner](./build/) als Chrome Extension hinzufügen
+
 ## Verwendete Software
 
 <table>

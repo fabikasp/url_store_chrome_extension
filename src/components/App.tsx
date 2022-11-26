@@ -12,7 +12,11 @@ export const App = () => {
   const [urls, setUrls] = useState<Url[]>([]);
   const [currentFilter, setCurrentFilter] = useState<string>("");
 
-  const addUrl = (url: string) => setUrls([...urls, { id: currentUrlId, url: url }]);
+  const addUrl = () => {
+    chrome.tabs.query({active: true, lastFocusedWindow: true}, (tabs: any) => {
+      setUrls([...urls, { id: currentUrlId, url: tabs[0].url }]);
+    });
+  };
   const deleteUrl = (id: number) => setUrls(urls.filter((url) => url.id != id));
   const getFilteredUrls = () => {
     if (currentFilter == "") {
@@ -41,24 +45,24 @@ export const App = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <TextField
-        sx={{ width: "40%", mt: "1%" }}
+        sx={{ width: 600, mt: "1%" }}
         label="Search URL"
-        InputProps={{ startAdornment: <SearchIcon sx={{ mr: 1 }} color="primary" /> }}
+        InputProps={{ startAdornment: <SearchIcon sx={{ mr: 1 }} color="info" /> }}
         variant="outlined"
-        color="primary"
+        color="info"
         value={currentFilter}
-        onChange={(event) => setCurrentFilter(event.target.value)}
+        onChange={(event: any) => setCurrentFilter(event.target.value)}
         focused
       />
       
       <UrlTable urls={getFilteredUrls()} deleteUrl={deleteUrl} />
 
       <Button
-        sx={{ width: "40%", mt: "1%" }}
+        sx={{ width: 600, mt: "1%" }}
         variant="contained" 
         startIcon={<AddCircle sx={{ color: "#FFFFFF" }} />}
-        color="primary"
-        onClick={() => addUrl(window.location.href)}
+        color="info"
+        onClick={addUrl}
       >Add URL</Button>
     </Box>
   );

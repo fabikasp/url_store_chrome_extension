@@ -11,20 +11,27 @@ import DeleteForever from "@mui/icons-material/DeleteForever";
 import { UrlTableProps } from "./types";
  
 export const UrlTable = ({ urls, deleteUrl }: UrlTableProps) => {
-  const StyledPaper = styled(Paper)(({ theme }) => ({
+  const StyledPaper = styled(Paper)(({ theme }: { theme: any }) => ({
     border: "2px solid",
-    borderColor: theme.palette.primary.main
+    borderColor: theme.palette.info.main
   }));
 
-  const StyledTableHeadColumn = styled(TableCell)(({ theme }) => ({
+  const StyledTableHeadColumn = styled(TableCell)(({ theme }: { theme: any }) => ({
     borderBottom: urls.length == 0 ? "0px" : "2px solid",
-    borderColor: theme.palette.primary.main
+    borderColor: theme.palette.info.main
   }));
+
+  const openUrl = (url: string) => {
+    try {
+      window.open(url);
+    } catch (ignore) {
+    }
+  };
 
   return (
-    <StyledPaper sx={{ width: "40%", mt: "1%" }}>
+    <StyledPaper sx={{ width: 600, mt: "1%" }}>
       <TableContainer sx={{ maxHeight: 300 }}>
-        <Table sx={{ border: "2px solid primary" }} stickyHeader size="small">
+        <Table sx={{ border: "2px solid info" }} stickyHeader size="small">
           <TableHead>
             <TableRow>
               <StyledTableHeadColumn sx={{ fontSize: "90%", fontWeight: "bold" }} align="left">URL</StyledTableHeadColumn>
@@ -36,10 +43,10 @@ export const UrlTable = ({ urls, deleteUrl }: UrlTableProps) => {
               <TableRow key={index}>
                 <TableCell
                   scope="row"
-                  onClick={() => window.open(url.url)}
+                  onClick={() => openUrl(url.url)}
                 >{url.url}</TableCell>
                 <TableCell align="right">
-                  <DeleteForever sx={{ mt: 0.5 }} color="primary" onClick={() => deleteUrl(url.id)} />
+                  <DeleteForever sx={{ mt: 0.5 }} color="info" onClick={() => deleteUrl(url.id)} />
                 </TableCell>
               </TableRow>
             ))}
