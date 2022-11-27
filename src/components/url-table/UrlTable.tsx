@@ -16,14 +16,15 @@ export const UrlTable = ({ urls, deleteUrl }: UrlTableProps) => {
   };
 
   return (
-    <TableContainer sx={{ maxHeight: 300, width: 600, mt: "1%" }}>
+    <TableContainer sx={{ maxHeight: 300, width: 700, mt: 1 }}>
       <Table sx={{ border: "2px solid primary" }} stickyHeader size="small">
         <TableBody>
           {urls.map((url, index) => (
             <TableRow key={index}>
+              <TableCell sx={{ fontWeight: "bold", width: 0 }} align="left" onClick={() => openUrl(url.url)}>{url.alias}</TableCell>
               <TableCell align="left" onClick={() => openUrl(url.url)}>{url.url}</TableCell>
               <TableCell align="right">
-                <DeleteForever sx={{ mt: 0.5 }} color="primary" onClick={() => deleteUrl(url.id)} />
+                <DeleteForever color="primary" onClick={() => deleteUrl(url.id)} />
               </TableCell>
             </TableRow>
           ))}
