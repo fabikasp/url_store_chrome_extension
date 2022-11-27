@@ -4,7 +4,7 @@ Chrome Extension zur Speicherung und zum Abruf von URLs.
 
 ## Ausführung
 
-[build-Ordner](./build/) als Chrome Extension hinzufügen
+[build-Ordner](./build/) als Chrome Extension zu Google Chrome hinzufügen
 
 ## Verwendete Software
 
