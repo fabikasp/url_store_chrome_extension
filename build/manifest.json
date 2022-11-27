@@ -8,5 +8,11 @@
         "default_popup": "index.html",
         "default_title": "URL Store"
     },
+    "icons": { 
+        "16": "icon.png",
+        "48": "icon.png",
+        "64": "icon.png",
+        "128": "icon.png" 
+    },
     "permissions": ["tabs"]
 }
