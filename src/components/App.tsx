@@ -64,7 +64,7 @@ export const App = () => {
 
       <Box sx={{ display: "flex", alignItems: "center", mt: 2.5 }}>
         <TextField
-          sx={{ width: 430 }}
+          sx={{ width: 440 }}
           label="URL Alias"
           InputProps={{ startAdornment: <Edit sx={{ mr: 1 }} color="primary" /> }}
           variant="outlined"
@@ -75,7 +75,7 @@ export const App = () => {
         />
 
         <Button
-          sx={{ width: 250, ml: 2.5, height: 54 }}
+          sx={{ width: 250, ml: 1.3, height: 54 }}
           variant="contained" 
           startIcon={<AddCircle sx={{ color: "#FFFFFF" }} />}
           color="primary"
