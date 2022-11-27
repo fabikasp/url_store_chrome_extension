@@ -42,14 +42,16 @@ export const App = () => {
     }
   }, [urls]);
 
+  // 
+
   return (
     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <TextField
         sx={{ width: 600, mt: "1%" }}
         label="Search URL"
-        InputProps={{ startAdornment: <SearchIcon sx={{ mr: 1 }} color="info" /> }}
+        InputProps={{ startAdornment: <SearchIcon sx={{ mr: 1 }} color="primary" /> }}
         variant="outlined"
-        color="info"
+        color="primary"
         value={currentFilter}
         onChange={(event: any) => setCurrentFilter(event.target.value)}
         focused
@@ -61,7 +63,7 @@ export const App = () => {
         sx={{ width: 600, mt: "1%" }}
         variant="contained" 
         startIcon={<AddCircle sx={{ color: "#FFFFFF" }} />}
-        color="info"
+        color="primary"
         onClick={addUrl}
       >Add URL</Button>
     </Box>

@@ -13,12 +13,12 @@ import { UrlTableProps } from "./types";
 export const UrlTable = ({ urls, deleteUrl }: UrlTableProps) => {
   const StyledPaper = styled(Paper)(({ theme }: { theme: any }) => ({
     border: "2px solid",
-    borderColor: theme.palette.info.main
+    borderColor: theme.palette.primary.main
   }));
 
   const StyledTableHeadColumn = styled(TableCell)(({ theme }: { theme: any }) => ({
     borderBottom: urls.length == 0 ? "0px" : "2px solid",
-    borderColor: theme.palette.info.main
+    borderColor: theme.palette.primary.main
   }));
 
   const openUrl = (url: string) => {
@@ -31,7 +31,7 @@ export const UrlTable = ({ urls, deleteUrl }: UrlTableProps) => {
   return (
     <StyledPaper sx={{ width: 600, mt: "1%" }}>
       <TableContainer sx={{ maxHeight: 300 }}>
-        <Table sx={{ border: "2px solid info" }} stickyHeader size="small">
+        <Table sx={{ border: "2px solid primary" }} stickyHeader size="small">
           <TableHead>
             <TableRow>
               <StyledTableHeadColumn sx={{ fontSize: "90%", fontWeight: "bold" }} align="left">URL</StyledTableHeadColumn>
@@ -41,12 +41,9 @@ export const UrlTable = ({ urls, deleteUrl }: UrlTableProps) => {
           <TableBody>
             {urls.map((url, index) => (
               <TableRow key={index}>
-                <TableCell
-                  scope="row"
-                  onClick={() => openUrl(url.url)}
-                >{url.url}</TableCell>
+                <TableCell align="left" onClick={() => openUrl(url.url)}>{url.url}</TableCell>
                 <TableCell align="right">
-                  <DeleteForever sx={{ mt: 0.5 }} color="info" onClick={() => deleteUrl(url.id)} />
+                  <DeleteForever sx={{ mt: 0.5 }} color="primary" onClick={() => deleteUrl(url.id)} />
                 </TableCell>
               </TableRow>
             ))}
