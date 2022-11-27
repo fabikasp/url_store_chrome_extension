@@ -10,7 +10,7 @@ import { UrlTableProps } from "./types";
 export const UrlTable = ({ urls, deleteUrl }: UrlTableProps) => {
   const openUrl = (url: string) => {
     try {
-      window.open(url);
+      chrome.tabs.create({url: url, active: false});
     } catch (ignore) {
     }
   };
